@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Juego Q&A</title>
+    <script src="quizz.js"></script>
+</head>
+
+<body>
+    <style>
+        body{
+            background-color: steelblue;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        .contenedor_p{
+            width:100vw;
+            height: 100vh;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid white;
+        }
+        .encabezado {
+          position: relative;
+          background: white;
+          min-width: 300px;
+          width: 70%;
+          max-width: 600px;
+          padding: 10px;
+        }
+        .pregunta{
+            padding: 10px;
+        }
+        .imagen{
+            object-fit: cover;
+            height: 200px;
+            width: 100%;
+        }
+        .btn{
+            background: white;
+            border-radius: 1mm;
+            width: 60%;
+            padding: 10px;
+            margin: 5px;
+        }
+        .btn:hover{
+            background: grey;
+            cursor:pointer;
+            transform: scale(1.05); 
+        }
+        .puntos, .puntuacion{
+          padding:10px;
+          color:white;
+        }
+        .btn_r{
+        background: white;
+        border-radius: 1mm;
+        width: 100px;
+        height:25px;
+        right:50px;
+        bottom:50px;
+        padding: 5px;
+        margin: 5px;
+        margin: 3cm;
+        text-align: center;
+        }
+    </style>
+
+    <div class="contenedor_p">
+      <div class="puntos" id="puntos">0</div>
+      <div class="puntuacion" id="puntuacion">/10</div>
+        <div class="encabezado">
+            <div class="categoria" id="categoria">
+            </div>
+            <div class="pregunta" id="pregunta">
+                PULSA CUALQUIER BOTON PARA COMENZAR
+            </div>
+            
+        </div>
+        <div class="btn" id="btn1" onclick="siguiente_pregunta(),puntuacion1()">
+          Respuesta 1
+        </div>
+        <div class="btn" id="btn2" onclick="siguiente_pregunta(),puntuacion2()">
+          Respuesta 2
+        </div>
+        <div class="btn" id="btn3" onclick="siguiente_pregunta(),puntuacion3()">
+          Respuesta 3
+        </div>
+        <div class="btn" id="btn4" onclick="siguiente_pregunta(),puntuacion4()">
+          Respuesta 4
+        </div>
+        <button onclick="reinicio()" class="btn_r">Reiniciar</button>
+    </div>
+    
+</body>
+</html>
